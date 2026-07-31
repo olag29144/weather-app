@@ -1,0 +1,1 @@
+This is a weather app, this app helps you to check the weather condition for a specific location or for other locations of your choice

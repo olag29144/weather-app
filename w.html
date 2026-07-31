@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyByGabby</title>
+    <meta name="description" content="A polished weather dashboard with live forecasts and quick insights.">
+    <meta name="theme-color" content="#0F172A">
+    <link rel="shortcut icon" href="images/WhatsApp Image 2026-07-30 at 00.25.28.jpeg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+
+    <link rel="stylesheet" href="w.css">
+</head>
+<body class="dark-theme">
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div>
+                <div class="brand">
+                    <img src="images/WhatsApp Image 2026-07-30 at 00.25.28 (1).jpeg" alt="">
+                    <span>Gabby Sky</span>
+                </div>
+
+                <div class="search-card">
+                    <h3>Find a city</h3>
+                    <form class="search-form" id="search-form">
+                        <input id="city-input" type="text" placeholder="Search for a city" autocomplete="off">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                    <div class="status-pill" id="status-pill"><i class="fa-solid fa-satellite-dish"></i><span>Loading weather…</span></div>
+                </div>
+            </div>
+
+            <div class="quick-card">
+                <h3>Today at a glance</h3>
+                <p>Check the forecast, wind, precipitation, and comfort levels in one calm view.</p>
+            </div>
+        </aside>
+
+        <main class="main">
+            <section class="main-card">
+                <div class="top-row">
+                    <div>
+                        <h2 id="city-name">Loading…</h2>
+                        <p class="meta" id="updated-time">Just a moment</p>
+                    </div>
+                </div>
+
+                <div class="weather-main">
+                    <div>
+                        <div class="weather-icon" id="weather-icon"><i class="fa-solid fa-sun"></i></div>
+                        <div class="temp" id="temp">--°</div>
+                        <div class="meta" id="condition">Checking the sky…</div>
+                    </div>
+                    <div class="meta" id="summary">Your forecast will appear here.</div>
+                </div>
+            </section>
+
+            <section class="highlights">
+                <article class="highlight-card">
+                    <div class="label">Feels like</div>
+                    <div class="value" id="feels-like">--°</div>
+                </article>
+                <article class="highlight-card">
+                    <div class="label">Humidity</div>
+                    <div class="value" id="humidity">--%</div>
+                </article>
+                <article class="highlight-card">
+                    <div class="label">Wind</div>
+                    <div class="value" id="wind">-- km/h</div>
+                </article>
+                <article class="highlight-card">
+                    <div class="label">Precipitation</div>
+                    <div class="value" id="precipitation">-- mm</div>
+                </article>
+            </section>
+
+            <section class="forecast-section">
+                <h3>5-day outlook</h3>
+                <div class="forecast-list" id="forecast-list"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="w.js"></script>
+</body>
+</html>
